@@ -11,7 +11,10 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   sensor_msgs
+  nav_msgs
   std_msgs
+  geometry_msgs
+  tf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -144,13 +147,33 @@ include_directories(
 # target_link_libraries(main test ${catkin_LIBRARIES})
 # add_dependencies(main ${catkin_EXPORTED_TARGETS})
 
-add_executable(mecanum src/mecanum.cpp)
-target_link_libraries(mecanum ${catkin_LIBRARIES})
-add_dependencies(mecanum ${catkin_EXPORTED_TARGETS})
+add_library(scara src/scara.cpp)
+target_link_libraries(scara ${catkin_LIBRARIES})
+add_dependencies(scara ${catkin_EXPORTED_TARGETS})
+
+add_library(detect_square src/detect_square.cpp)
+target_link_libraries(detect_square ${catkin_LIBRARIES})
+add_dependencies(detect_square ${catkin_EXPORTED_TARGETS})
+
+add_library(chassis_control src/chassis_control.cpp)
+target_link_libraries(chassis_control ${catkin_LIBRARIES})
+add_dependencies(chassis_control ${catkin_EXPORTED_TARGETS})
+
+add_executable(main src/main.cpp)
+target_link_libraries(main chassis_control scara detect_square ${catkin_LIBRARIES})
+add_dependencies(main ${catkin_EXPORTED_TARGETS})
+
+add_executable(wheel_odom src/wheel_odom.cpp)
+target_link_libraries(wheel_odom ${catkin_LIBRARIES})
+add_dependencies(wheel_odom ${catkin_EXPORTED_TARGETS})
 
 add_executable(mecanum_test src/mecanum_test.cpp)
 target_link_libraries(mecanum_test ${catkin_LIBRARIES})
 add_dependencies(mecanum_test ${catkin_EXPORTED_TARGETS})
+
+add_executable(imu_test src/imu_test.cpp)
+target_link_libraries(imu_test ${catkin_LIBRARIES})
+add_dependencies(imu_test ${catkin_EXPORTED_TARGETS})
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

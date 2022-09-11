@@ -1,0 +1,2 @@
+race:robot_pose_ekf:rosserial_python:urdf_tutorial
+-DCATKIN_DEVEL_PREFIX=/home/xangusx/tel_ws/devel -DCMAKE_INSTALL_PREFIX=/home/xangusx/tel_ws/install -G Unix Makefiles
