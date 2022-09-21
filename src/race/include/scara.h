@@ -2,6 +2,7 @@
 #define _SCARA_H_
 
 #include "ros/ros.h"
+#include "detect_square.h"
 #include <geometry_msgs/Point.h>
 
 ros::Publisher scara_pub;

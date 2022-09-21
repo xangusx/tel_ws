@@ -25,6 +25,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/xangusx/tel_ws/build/race/CMakeFiles/detect_square.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

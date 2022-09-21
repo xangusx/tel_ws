@@ -15,14 +15,14 @@ geometry_msgs/Point.h
 /home/xangusx/tel_ws/src/race/include/scara.h
 ros/ros.h
 /home/xangusx/tel_ws/src/race/include/ros/ros.h
+detect_square.h
+/home/xangusx/tel_ws/src/race/include/detect_square.h
 geometry_msgs/Point.h
 -
 
 /home/xangusx/tel_ws/src/race/src/scara.cpp
 scara.h
 /home/xangusx/tel_ws/src/race/src/scara.h
-detect_square.h
-/home/xangusx/tel_ws/src/race/src/detect_square.h
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string

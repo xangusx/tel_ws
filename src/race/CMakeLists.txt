@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   geometry_msgs
   tf
+  visualization_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -147,8 +148,12 @@ include_directories(
 # target_link_libraries(main test ${catkin_LIBRARIES})
 # add_dependencies(main ${catkin_EXPORTED_TARGETS})
 
+add_library(first src/first.cpp)
+target_link_libraries(first chassis_control scara ${catkin_LIBRARIES})
+add_dependencies(first ${catkin_EXPORTED_TARGETS})
+
 add_library(scara src/scara.cpp)
-target_link_libraries(scara ${catkin_LIBRARIES})
+target_link_libraries(scara detect_square ${catkin_LIBRARIES})
 add_dependencies(scara ${catkin_EXPORTED_TARGETS})
 
 add_library(detect_square src/detect_square.cpp)
@@ -160,7 +165,7 @@ target_link_libraries(chassis_control ${catkin_LIBRARIES})
 add_dependencies(chassis_control ${catkin_EXPORTED_TARGETS})
 
 add_executable(main src/main.cpp)
-target_link_libraries(main chassis_control scara detect_square ${catkin_LIBRARIES})
+target_link_libraries(main chassis_control scara detect_square first ${catkin_LIBRARIES})
 add_dependencies(main ${catkin_EXPORTED_TARGETS})
 
 add_executable(wheel_odom src/wheel_odom.cpp)
@@ -174,6 +179,10 @@ add_dependencies(mecanum_test ${catkin_EXPORTED_TARGETS})
 add_executable(imu_test src/imu_test.cpp)
 target_link_libraries(imu_test ${catkin_LIBRARIES})
 add_dependencies(imu_test ${catkin_EXPORTED_TARGETS})
+
+add_executable(base_shapes src/base_shapes.cpp)
+target_link_libraries(base_shapes ${catkin_LIBRARIES})
+add_dependencies(base_shapes ${catkin_EXPORTED_TARGETS})
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

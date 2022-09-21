@@ -1,6 +1,4 @@
 #include "scara.h"
-#include "detect_square.h"
-
 
 void ScaraTake()
 {

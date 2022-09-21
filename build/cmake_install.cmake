@@ -134,7 +134,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/xangusx/tel_ws/build/rosserial_python/cmake_install.cmake")
   include("/home/xangusx/tel_ws/build/race/cmake_install.cmake")
   include("/home/xangusx/tel_ws/build/robot_pose_ekf/cmake_install.cmake")
-  include("/home/xangusx/tel_ws/build/urdf_tutorial/cmake_install.cmake")
 
 endif()
 

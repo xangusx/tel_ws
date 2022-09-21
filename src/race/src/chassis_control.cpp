@@ -224,7 +224,7 @@ void turn(float target_w,float middle_w,float max_angular_vel,float angular_acce
         std::cout<<"dir_w = "<<dir_w<<"\n";
         if(abs(vel_msg.angular.z)>=max_angular_vel)
         {
-            std::cout<<"rotation_maxvel\n";
+            std::cout<<"\nrotation_maxvel\n";
             std::cout<<"vel_rotation"<<vel_msg.angular.z<<"\n";
             vel_msg.angular.z = dir_w*max_angular_vel;
             temp = 1;
@@ -236,7 +236,7 @@ void turn(float target_w,float middle_w,float max_angular_vel,float angular_acce
     }
     while(temp==1&&ros::ok())
     {
-        std::cout<<"rotation_keep_maxvel\n";
+        std::cout<<"\nrotation_keep_maxvel\n";
         std::cout<<"omega: "<<position_w*180/PI<<"\n";
         std::cout<<"delta_rotation: "<<delta_rotation<<"\n";
         ros::spinOnce();
@@ -249,7 +249,7 @@ void turn(float target_w,float middle_w,float max_angular_vel,float angular_acce
     temp = 0;
     while(abs(delta_rotation)>5&&ros::ok()&&temp==0)
     {
-        std::cout<<"rotation_reduce_vel\n";
+        std::cout<<"\nrotation_reduce_vel\n";
         vel_msg.angular.z -= dir_w*angular_accel;
         ros::spinOnce();
         delta_rotation = target_w-position_w*180/PI;

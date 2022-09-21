@@ -89,12 +89,12 @@ detect_square_EXTERNAL_OBJECTS =
 /home/xangusx/tel_ws/devel/lib/libdetect_square.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
 /home/xangusx/tel_ws/devel/lib/libdetect_square.so: /opt/ros/noetic/lib/libxmlrpcpp.so
 /home/xangusx/tel_ws/devel/lib/libdetect_square.so: /opt/ros/noetic/lib/libtf2.so
-/home/xangusx/tel_ws/devel/lib/libdetect_square.so: /opt/ros/noetic/lib/libroscpp_serialization.so
 /home/xangusx/tel_ws/devel/lib/libdetect_square.so: /opt/ros/noetic/lib/librosconsole.so
 /home/xangusx/tel_ws/devel/lib/libdetect_square.so: /opt/ros/noetic/lib/librosconsole_log4cxx.so
 /home/xangusx/tel_ws/devel/lib/libdetect_square.so: /opt/ros/noetic/lib/librosconsole_backend_interface.so
 /home/xangusx/tel_ws/devel/lib/libdetect_square.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/xangusx/tel_ws/devel/lib/libdetect_square.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/home/xangusx/tel_ws/devel/lib/libdetect_square.so: /opt/ros/noetic/lib/libroscpp_serialization.so
 /home/xangusx/tel_ws/devel/lib/libdetect_square.so: /opt/ros/noetic/lib/librostime.so
 /home/xangusx/tel_ws/devel/lib/libdetect_square.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
 /home/xangusx/tel_ws/devel/lib/libdetect_square.so: /opt/ros/noetic/lib/libcpp_common.so
