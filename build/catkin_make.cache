@@ -1,0 +1,2 @@
+IMU/IMU_driver:IMU/imu_calib:race:rosserial_python:rosserial_stm32:scara_arm
+-DCATKIN_DEVEL_PREFIX=/home/ditrobotics/TEL_2022_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ditrobotics/TEL_2022_ws/install -G Unix Makefiles

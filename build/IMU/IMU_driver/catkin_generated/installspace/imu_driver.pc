@@ -1,0 +1,8 @@
+prefix=/home/ditrobotics/TEL_2022_ws/install
+
+Name: imu_driver
+Description: Description of imu_driver
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

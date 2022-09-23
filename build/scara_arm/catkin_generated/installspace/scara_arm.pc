@@ -1,0 +1,8 @@
+prefix=/home/ditrobotics/TEL_2022_ws/install
+
+Name: scara_arm
+Description: Description of scara_arm
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
